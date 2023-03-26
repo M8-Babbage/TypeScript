@@ -7,18 +7,19 @@
 
   // Con las clases abstractas podemos definir los contratos usando los tipos de acceso, lo que no permiten las interface
   abstract class Base {
-    protected abstract getName(name: string): string;
     protected abstract height: number;
+    protected abstract getName(name: string): string;
   }
 
   class Derived extends Base {
-    constructor(protected height: number = 5, public newName: string) {
+    constructor(protected height: number = 5) {
       super();
     }
-    protected getName(name: string) {
-      return "world" + name;
+    public getName(name: string) {
+      return "hello " + name;
     }
   }
 
-  const test = new Derived(10, "Laura");
+  const user = new Derived(10);
+  console.log(user.getName("Laura"));
 })();
