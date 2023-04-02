@@ -1,3 +1,4 @@
+// () => {}; Funciones lambda, funciones flecha, funciones anónimas y funciones de expresión.
 // IIFE: Immediately Invoked Function Expression, evitar contaminar el scope global
 (() => {
   // No usar: [String, Boolean, Number] (se usan en JS),
@@ -30,7 +31,7 @@
   // ---------------------------- STRINGS -------------------------------//
   // ["iPhone12", 'iPhone12', `iPhone12`] las comillas                   //
   // --------------------------------------------------------------------//
-  const productName: string = `Fernandez`;
+  const productName: string = 'Fernandez';
   const otherProductName: string = "Susano " + productName;
   const anotherProductName: string = `Laura ${otherProductName}`;
 
@@ -143,7 +144,6 @@
   // Inferencia de tipo never
   const withoutEnd = () => {
     while (true) {
-      return;
     }
   };
 
@@ -151,6 +151,8 @@
   // ------------------------ READ ONLY ARRAY ---------------------------//
   // --------------------------------------------------------------------//
   // Evitar mutaciones en los arreglos
+  const myReadArray: readonly number[] = [1, 2, 3, 4];
+  const myTupleReadOnly: readonly [number, string] = [1, "Laura"];
   const readArray: ReadonlyArray<number> = [1, 2, 3, 4];
   // El método filter regresa un nuevo arreglo por ende no muta el arreglo original y puede ser usado
   readArray.filter((item) => {

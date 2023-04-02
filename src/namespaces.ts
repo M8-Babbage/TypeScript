@@ -1,6 +1,7 @@
 // --------------------------------------------------------------------//
 // ------------------------------ ENUMS -------------------------------//
-// Creación de un namespace - vendrían siendo como clases pequeñas que contienen funcionalidades
+// Creación de un namespace - vendrían siendo como clases pequeñas
+// que contienen funcionalidades
 // --------------------------------------------------------------------//
 namespace Validations {
   export const validateText = (text: string): boolean => {

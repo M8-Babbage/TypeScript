@@ -29,12 +29,15 @@
   };
   anyParams("Laura", "Susano", 4, true);
 
+
+  // interface User = { user: string; id: number; param: number; otherParam: number };
   // Con un Type dentro de la función
   const typeDestructuring = (usuario: User): string => {
     const { user, id, ...rest } = usuario;
     return `3. User: ${user}, ID: ${id}, Rest: ${JSON.stringify(rest)}`;
   };
-  typeDestructuring({ user: "Laura", id: 16, param: 1, otherParam: 2 });
+  const laurita: User = { user: "Laura", id: 16, param: 1, otherParam: 2 };
+  typeDestructuring(laurita);
 
   // Destructuring dentro de los parámetros
   const anotherTypeDestructuring = ({ user, id, ...rest }: User): string => {

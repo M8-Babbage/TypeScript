@@ -26,7 +26,7 @@
     return `2. My name is ${name} ${lastname}, status: ${
       status ? status : "Desconocido"
     }
-3. ${status ?? "Status null o undefined: Nullish coalescing"}`;
+3. ${status ?? "Status null: Nullish coalescing"}`;
   };
   getOldUser("Laura", "Susano");
   getOldUser("Laura", "Susano", true);

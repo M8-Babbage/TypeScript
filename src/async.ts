@@ -37,7 +37,7 @@ interface Category {
     );
     // Or force if is necesary
     // const forceData = data as Products[];
-    return data.slice(0, 2).map((item) => `${item.id} - ${item.description}`);
+    return data;
   }
 
   const productsAsync = await getProductsAsync();
